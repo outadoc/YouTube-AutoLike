@@ -1,0 +1,86 @@
+/* Auto-Like for YouTube // options.css
+   Copyright (c) 2014 outa[dev].
+*/
+
+body {
+	padding: 10px;
+	margin-top: 35px;
+}
+
+.header {
+	background-color: #d8d8d8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#cbcbcb));
+	background-image: -webkit-linear-gradient(top, #e6e6e6, #cbcbcb);
+	background-image: linear-gradient(top, #e6e6e6, #cbcbcb);
+	
+	border-bottom: 1px solid #a6a6a6;
+	margin: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	position: absolute;
+	height: 53px;
+}
+
+.header a {
+	top: -48px;
+	float: right;
+	position: relative;
+	margin-right: 10px;
+}
+
+.header a img {
+	height: 42px;
+}
+
+h1 {
+	margin: 10px;
+	font-size: 28px;
+}
+
+h1 small {
+	color: #959595;
+	font-size: 23px;
+}
+
+h1, p, th {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+#whitelist input {
+	height: 90%;
+	width: 90%;
+}
+
+#whitelist td {
+	height: 30px;
+	width: 180px;
+}
+
+#whitelist button {
+	width: 35px;
+	font-size: 18px;
+	margin-right: 5px;
+}
+
+#whitelist th {
+	text-align: left;
+}
+
+input[name="save"] {
+	margin-top: 10px;
+	width: 150px;
+}
+
+#help {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.eg-user {
+	color: #cb0000;
+}
+
+.eg-title {
+	color: #008787;
+}

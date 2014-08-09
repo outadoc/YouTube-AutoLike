@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "Auto-Like for YouTube®",
+	"version": "1.0",
+
+	"description": "Autotomatically like your favourite Youtubers without even having to click!",
+
+	"content_scripts": [{
+    	"matches": ["*://*.youtube.com/*"],
+    	"js": ["js/jquery.js", "js/autolike-cs.js"]
+	}],
+	"options_page": "options.html",
+	"permissions": [
+		"storage",
+		"*://*.youtube.com/*"
+	],
+	"icons": {
+		"16": "img/icon-16.png",
+		"48": "img/icon-48.png",
+		"128": "img/icon-128.png"
+	}
+}
