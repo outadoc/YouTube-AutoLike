@@ -1,5 +1,3 @@
-console.log("test");
-
 var intervalId = 0;
 setTimeout(setup, 5000);
 

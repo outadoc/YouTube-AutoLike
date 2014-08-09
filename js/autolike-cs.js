@@ -1,4 +1,4 @@
-//(function() {
+(function() {
 
 		// inject listen.js into current webpage
 		var s = document.createElement('script');
@@ -9,4 +9,4 @@
 		
 		(document.head||document.documentElement).appendChild(s);
 
-//})();
+})();

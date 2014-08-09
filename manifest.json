@@ -3,15 +3,13 @@
 	"name": "Auto-Like for YouTube®",
 	"version": "1.0",
 
-	"description": "Autotomatically like your favourite Youtubers without even having to click!",
+	"description": "Automatically like your favourite Youtube videos without even having to click!",
 
 	"content_scripts": [{
     	"matches": ["*://*.youtube.com/*"],
-    	"js": ["js/jquery-2.1.1.min.js", "js/autolike-cs.js"]
+    	"js": ["js/autolike-cs.js"]
 	}],
-	"options_page": "options.html",
 	"permissions": [
-		"storage",
 		"*://*.youtube.com/*"
 	],
 	"icons": {
