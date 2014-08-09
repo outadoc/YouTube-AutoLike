@@ -6,8 +6,8 @@
 	"description": "Automatically like your favourite Youtube videos without even having to click!",
 
 	"content_scripts": [{
-    	"matches": ["*://*.youtube.com/*"],
-    	"js": ["js/autolike-cs.js"]
+    		"matches": ["*://*.youtube.com/*"],
+    		"js": ["js/autolike-cs.js"]
 	}],
 	"permissions": [
 		"*://*.youtube.com/*"
