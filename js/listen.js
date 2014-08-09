@@ -1,42 +1,51 @@
-var intervalId = 0;
-setTimeout(setup, 5000);
+(function() {
 
-function setup() {
-	var player =
-		document.getElementById('movie_player') ||
-		document.getElementsByTagName('embed')[0];
+	var intervalId = 0;
+	setTimeout(setup, 5000);
 
-	if(player != null && player.getDuration) {
-		intervalId = setInterval(function() {
-			console.log("checkin'...");
+	function setup() {
+		var player =
+			document.getElementById('movie_player') ||
+			document.getElementsByTagName('embed')[0];
 
-			if(player.getDuration() / 2 < player.getCurrentTime()) {
-				if(!isVideoLiked()) {
-					console.log("50% in! trying to like the video...");
-					likeVideo();
-				}
+		if(player != null && player.getDuration) {
+			if(!isVideoLiked()) {
+				intervalId = setInterval(function() {
+					console.log("checkin'...");
 
-				clearInterval(intervalId);
+					if(player.getDuration() / 2 < player.getCurrentTime()) {
+						if(!isVideoLiked()) {
+							console.log("50% in! trying to like the video...");
+							likeVideo();
+						}
+
+						clearInterval(intervalId);
+					}
+
+				}, 2000);
+			} else {
+				console.log("video was already liked, not listening");
 			}
 
-		}, 2000);
-	} else {
-		console.error("no youtube player here... :c");
+		} else {
+			console.error("no youtube player here... :c");
+		}
 	}
-}
 
-function isVideoLiked() {
-	var likeDOM = document.getElementById("watch-like");
+	function isVideoLiked() {
+		var likeDOM = document.getElementById("watch-like");
 
-	if(likeDOM != null && likeDOM.className.indexOf("yt-uix-button-toggled") != -1) {
-		return true;
-	} else {
-		return false;
+		if(likeDOM != null && likeDOM.className.indexOf("yt-uix-button-toggled") != -1) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-}
 
-function likeVideo() {
-	var likeDOM = document.getElementById("watch-like");
-	console.log("clicking!");
-	likeDOM.click();
-}
+	function likeVideo() {
+		var likeDOM = document.getElementById("watch-like");
+		console.log("clicking!");
+		likeDOM.click();
+	}
+
+})();
