@@ -7,7 +7,7 @@
 
 	"content_scripts": [{
     	"matches": ["*://*.youtube.com/*"],
-    	"js": ["js/jquery.js", "js/autolike-cs.js"]
+    	"js": ["js/jquery-2.1.1.min.js", "js/autolike-cs.js"]
 	}],
 	"options_page": "options.html",
 	"permissions": [
@@ -18,5 +18,8 @@
 		"16": "img/icon-16.png",
 		"48": "img/icon-48.png",
 		"128": "img/icon-128.png"
-	}
+	},
+	"web_accessible_resources": [
+		"js/listen.js"
+	]
 }
