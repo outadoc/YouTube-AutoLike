@@ -6,6 +6,7 @@
 	function setup() {
 		var player =
 			document.getElementById('movie_player') ||
+			document.getElementsByClassName('html5-main-video')[0] ||
 			document.getElementsByTagName('embed')[0];
 
 		if(player != null && player.getDuration) {
